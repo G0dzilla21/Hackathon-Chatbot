@@ -1,0 +1,53 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../Font.otf);
+  }
+
+* {
+    font-family: mainFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+
+  :root{
+    --mainColor:black;
+    --mainColorLight: grey;
+    --textColor: white;
+    --secondaryTextColor: gold;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    background-color: var(--mainColorLight);
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--secondaryTextColor);
+  }
+
+  h3 {
+    background-color: var(--mainColor);
+  }
+
+  nav {
+    background-color: var(--mainColor);
+  }
+
+  nav a {
+    margin: 0 2rem;
+    color: var(--secondaryTextColor);
+    text-decoration: none;
+    font-size: 20px;
+    background-color: var(--mainColor);
+    
+  }
+
+  nav a:hover{
+    color: var(--textColor);
+  }
+
+

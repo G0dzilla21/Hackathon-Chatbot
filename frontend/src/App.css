@@ -1,0 +1,5 @@
+.typewriter-span {
+    display: inline-block;
+    white-space: nowrap; /* Change 'pre' to 'nowrap' to prevent line breaks */
+    overflow: hidden;
+  }

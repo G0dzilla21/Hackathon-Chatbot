@@ -1,0 +1,55 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../Font.otf);
+  }
+
+* {
+    font-family: mainFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  :root{
+    --mainColor:black;
+    --mainColorLight: grey;
+    --textColor: white;
+    --secondaryTextColor: gold;
+  }
+ 
+.center{
+    text-align: center;
+    margin: auto;
+    width:50%;
+}
+.centerBtn{
+    text-align: center;
+    margin: auto;
+    max-width: 80px;
+}
+
+.loginBox{
+    font-size: 32;
+    text-align: center;
+    padding-top: 20px;
+   
+}
+
+.login-text-container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 5px solid black;
+
+}
+.userInfoBox{
+    font-size: 18px;
+  }
+
+.loginBtn{
+    font-size: 18px;
+   
+  }
+
+.addedInfo{
+  font-family: 'Times New Roman', Times, serif;
+}
