@@ -2,9 +2,9 @@
 
 Open terminal -
 
-## pip install -r requirements.txt
-
 ## cd backend
+
+## pip install -r requirements.txt
 
 ## flask run
 
