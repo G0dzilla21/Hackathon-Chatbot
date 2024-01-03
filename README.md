@@ -1,6 +1,6 @@
 ## Starting out 
 
-Open terminal -
+# Open terminal -
 
 ## cd backend
 
@@ -8,7 +8,7 @@ Open terminal -
 
 ## flask run
 
-open another terminal -
+# open another terminal -
 
 ## cd frontend
 
