@@ -27,6 +27,6 @@ six==1.16.0
 sqlalchemy==1.4.46
 werkzeug==2.2.2
 wtforms==3.0.1
-openai
-pymysql
-cryptography
+openai==1.6.1
+pymysql==1.1.0
+cryptography==41.0.7
