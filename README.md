@@ -20,22 +20,6 @@ This guide walks you through setting up the project on your local machine.
    flask run
    ```
 
-### Setting Up the Frontend
-
-1. **Open Another Terminal Window**.
-2. **Navigate to the Frontend Directory:**
-   ```
-   cd frontend
-   ```
-3. **Install Node.js Dependencies:**
-   ```
-   npm install
-   ```
-4. **Start the Frontend Application:**
-   ```
-   npm start
-   ```
-
 ## Configuration
 
 ### Creating the .env File
@@ -52,6 +36,23 @@ your_api_key=<your_openai_api_key>
 Replace the placeholders (`<your_secret_key>`, `<password>`, `<your_schema_name>`, `<your_openai_api_key>`) with your actual values.
 
 **Note:** The `DATABASE_URL` is just an example. Replace `root`, `<password>`, and `sakila` with your actual MySQL username, password, and database name.
+
+
+### Setting Up the Frontend
+
+1. **Open Another Terminal Window**.
+2. **Navigate to the Frontend Directory:**
+   ```
+   cd frontend
+   ```
+3. **Install Node.js Dependencies:**
+   ```
+   npm install
+   ```
+4. **Start the Frontend Application:**
+   ```
+   npm start
+   ```
 
 ## Important Notes
 
