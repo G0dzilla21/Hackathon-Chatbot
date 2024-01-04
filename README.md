@@ -1,26 +1,51 @@
-## Starting out 
+# Project Setup Instructions
 
-# Open terminal -
+This guide walks you through setting up the project on your local machine.
 
-## cd backend
+## Getting Started
 
-## pip install -r requirements.txt
+### Setting Up the Backend
 
-## flask run
+1. **Open a Terminal Window.**
+2. **Navigate to the Backend Directory:**
+   ```bash
+   cd backend
+Install the Required Python Packages:
+bash
+Copy code
+pip install -r requirements.txt
+Start the Flask Application:
+bash
+Copy code
+flask run
+Setting Up the Frontend
+Open Another Terminal Window.
+Navigate to the Frontend Directory:
+bash
+Copy code
+cd frontend
+Install Node.js Dependencies:
+bash
+Copy code
+npm install
+Start the Frontend Application:
+bash
+Copy code
+npm start
+Configuration
+Creating the .env File
+Create a .env file in the main project directory (where the frontend and backend folders are located) and add the following contents:
 
-# open another terminal -
+env
+Copy code
+SECRET_KEY=<your_secret_key>
+DATABASE_URL=mysql+pymysql://root:<password>@localhost/sakila
+SCHEMA=<your_schema_name>
+your_api_key=<your_openai_api_key>
+Replace the placeholders (<your_secret_key>, <password>, <your_schema_name>, <your_openai_api_key>) with your actual values.
 
-## cd frontend
+Note: The DATABASE_URL is just an example. Replace root, <password>, and sakila with your actual MySQL username, password, and database name.
 
-## npm install
-
-## npm start
-
-# create .env file in main project directory (where frontend and backend folders reside)
-
-# add contents (keys are shared with those permitted):
-
-SECRET_KEY=
-DATABASE_URL= (Ex. mysql+pymysql://root:pass@localhost/sakila)
-SCHEMA=
-your_api_key= (Open AI Key)
+Important Notes
+Ensure that you have Python and Node.js installed on your system before starting.
+The API keys and secret keys should be kept confidential and not shared publicly.
