@@ -21,6 +21,6 @@
 # add contents (keys are shared with those permitted):
 
 SECRET_KEY=
-DATABASE_URL=
+DATABASE_URL= (Ex. mysql+pymysql://root:pass@localhost/sakila)
 SCHEMA=
-your_api_key=
+your_api_key= (Open AI Key)
