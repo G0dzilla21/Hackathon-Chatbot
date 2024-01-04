@@ -1,8 +1,12 @@
 from sqlalchemy import create_engine, MetaData
 from flask import Flask, request, jsonify
+import os
 
 # Replace with your actual database URL
-DATABASE_URL = "mysql+pymysql://root:root@localhost/sakila"
+#DATABASE_URL = "mysql+pymysql://root:root@localhost/sakila"
+
+#Database URL now pulled from .env file
+DATABASE_URL = os.environ['DATABASE_URL'] # **change to your url in .env**
 
 # Connect to the database
 engine = create_engine(DATABASE_URL)

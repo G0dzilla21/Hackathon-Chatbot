@@ -14,7 +14,8 @@ def get_response(chat):
     # Create a chat completion with the conversation history
     #Start-time utilizing decorator
     completion = client.chat.completions.create(
-        model="gpt-3.5-turbo-1106",
+        #model="gpt-3.5-turbo-1106",
+        model="gpt-4-1106-preview",
         messages=chat
     )#
     #Endtime
