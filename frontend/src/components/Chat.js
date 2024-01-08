@@ -48,7 +48,8 @@ const Chat = () => {
       <div className="chatInterface">
       <div className="convDisplay">
         {chat.map((item, index) => (
-          <div key={index} style={{backgroundColor: index % 2 === 0? 'green' : 'lime', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px'}}>
+          <div key={index} style={{backgroundColor: index % 2 === 0? 'goldenrod' : 'white', textAlign: index % 2 === 0? 'right' : 'left',
+          marginLeft: index % 2 === 0 ? '60%':'1%',marginRight: index % 2 === 0 ? '1%':'60%'}}>
             <p><strong>{item.role}: </strong>{item.text}</p>
           </div>
         ))}
@@ -57,7 +58,7 @@ const Chat = () => {
           <Form>
             <Form.Group>
               <Form.Control as="textarea" rows={5} value={textInput} placeholder="" onChange={(e) => setTextInput(e.target.value)}
-                style={{width:'90vw',height:'20vh',fontSize:'18px',marginTop:'40vh',marginLeft:'5vw',backgroundColor:'darkgray',borderColor:'black',borderRadius:'10px'}}></Form.Control>
+                style={{width:'80vw',height:'15vh',fontSize:'18px',marginTop:'10vh',marginLeft:'5vw',backgroundColor:'darkgray',borderColor:'black',borderRadius:'10px'}}></Form.Control>
               <br></br>
               <button type="button" onClick={interact}>Submit</button>
             </Form.Group>
