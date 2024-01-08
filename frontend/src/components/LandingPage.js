@@ -1,5 +1,4 @@
 import "../style/LandingPage.css";
-import Hero from "./Hero";
 import Chat from "./Chat";
 
 const LandingPage = () => {
@@ -12,7 +11,6 @@ const LandingPage = () => {
           <a href="#">Register</a>
         </nav>
       </header>
-      <Hero />
       <Chat />
     </div>
   );
