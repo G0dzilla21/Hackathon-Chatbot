@@ -45,28 +45,22 @@ const Chat = () => {
   return (
     <div className="main">
       <h1> Say Hi to Ferestha </h1>
-      <div className="chatInterface">
       <div className="convDisplay">
+        <h2>Conversation Log</h2>
         {chat.map((item, index) => (
-          <div key={index} style={{backgroundColor: index % 2 === 0? 'goldenrod' : 'white', textAlign: index % 2 === 0? 'right' : 'left',
-          marginLeft: index % 2 === 0 ? '60%':'1%',marginRight: index % 2 === 0 ? '1%':'60%'}}>
+          <div key={index} style={{backgroundColor: index % 2 === 0? 'goldenrod' : 'lightgray', textAlign: index % 2 === 0? 'right' : 'left',
+          marginLeft: index % 2 === 0 ? '60%':'1%',marginRight: index % 2 === 0 ? '1%':'60%',borderRadius:'5px',borderStyle:'none'}}>
             <p><strong>{item.role}: </strong>{item.text}</p>
-          </div>
+          </div> 
         ))}
-      </div>
-        <div className="input">
-          <Form>
+        <Form>
             <Form.Group>
-              <Form.Control as="textarea" rows={5} value={textInput} placeholder="" onChange={(e) => setTextInput(e.target.value)}
-              ></Form.Control>
-              <br></br>
+              <Form.Control as="textarea" rows={2} value={textInput} placeholder="Type here..." onChange={(e) => setTextInput(e.target.value)} style={{resize:'none',width:'25%'}}></Form.Control>
               <button type="button" onClick={interact}>Submit</button>
             </Form.Group>
           </Form>
-        </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Chat;
