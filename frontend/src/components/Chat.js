@@ -58,7 +58,7 @@ const Chat = () => {
           <Form>
             <Form.Group>
               <Form.Control as="textarea" rows={5} value={textInput} placeholder="" onChange={(e) => setTextInput(e.target.value)}
-                style={{width:'80vw',height:'15vh',fontSize:'18px',marginTop:'10vh',marginLeft:'5vw',backgroundColor:'darkgray',borderColor:'black',borderRadius:'10px'}}></Form.Control>
+              ></Form.Control>
               <br></br>
               <button type="button" onClick={interact}>Submit</button>
             </Form.Group>

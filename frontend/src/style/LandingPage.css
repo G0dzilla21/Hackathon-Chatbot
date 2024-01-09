@@ -12,10 +12,10 @@
   }
 
   :root{
-    --mainColor:black;
-    --mainColorLight: grey;
-    --textColor: white;
-    --secondaryTextColor: gold;
+    --mainColor:yellow;
+    --mainColorLight: purple;
+    --textColor: black;
+    --secondaryTextColor: brown;
   }
 
   header {
