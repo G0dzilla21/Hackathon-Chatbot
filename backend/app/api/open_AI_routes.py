@@ -2,9 +2,9 @@ from flask import Blueprint, request, jsonify
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-from schema_extractor import schema_info
+#from schema_extractor import schema_info
 from tabulate import tabulate
-
+from rds_schema_extractor import schema_info
 
 
 load_dotenv()
