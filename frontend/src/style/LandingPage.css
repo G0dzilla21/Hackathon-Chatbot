@@ -8,13 +8,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
+    color: white;
     
   }
 
   :root{
-    --mainColor:yellow;
+    --mainColor:grey;
     --mainColorLight: purple;
-    --textColor: black;
+    --textColor: white;
     --secondaryTextColor: brown;
   }
 
