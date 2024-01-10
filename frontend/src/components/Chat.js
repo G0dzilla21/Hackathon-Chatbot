@@ -1,7 +1,7 @@
-import "../style/Chat.css";
-import Form from "react-bootstrap/Form";
-import { useState } from 'react';
 import axios from 'axios';
+import { useState } from 'react';
+import Form from "react-bootstrap/Form";
+import "../style/Chat.css";
 import useCookie from './hooks/useCookie';
 
 const Chat = () => {
@@ -48,8 +48,7 @@ const Chat = () => {
       <div className="convDisplay">
         <h2>Conversation Log</h2>
         {chat.map((item, index) => (
-          <div key={index} style={{backgroundColor: index % 2 === 0? 'goldenrod' : 'lightgray', textAlign: index % 2 === 0? 'right' : 'left',
-          marginLeft: index % 2 === 0 ? '60%':'1%',marginRight: index % 2 === 0 ? '1%':'60%',borderRadius:'5px',borderStyle:'none'}}>
+          <div key={index} style={{backgroundColor: index % 2 === 0? 'green' : 'lime', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px', whiteSpace: 'pre-wrap'/* whiteSpace: 'pre-wrap' must be here for formatting */}}>
             <p><strong>{item.role}: </strong>{item.text}</p>
           </div> 
         ))}
