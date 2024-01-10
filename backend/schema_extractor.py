@@ -17,17 +17,15 @@ schema_info = {}
 # Number of records to fetch from each table
 record_limit = 5  # Adjust as needed
 
-# Collect tables, columns, relationships, and data
 for table in metadata.tables.values():
     table_name = table.name
+    excluded_columns = []  # Define the columns to exclude (e.g., columns with byte data)
     table_info = {
         "columns": [],
         "relationships": [],
-        f"{table_name}_data": []  # Data key named after the table
+        "excluded_columns": [],  # Add this line to include excluded columns info
+        "data": []  # Using a key "data" to store records
     }
-
-    # Define the columns to exclude (e.g., columns with byte data)
-    excluded_columns = []
 
     # Collect columns and identify columns with byte data
     for column in table.c:
@@ -41,6 +39,9 @@ for table in metadata.tables.values():
         if 'BLOB' in str(column.type).upper() or 'BYTEA' in str(column.type).upper():
             excluded_columns.append(column.name)
 
+    # Add excluded columns to table_info
+    table_info["excluded_columns"] = excluded_columns
+
     # Fetch a few records from the table
     with engine.connect() as connection:
         result = connection.execute(table.select().limit(record_limit)).fetchall()
@@ -49,7 +50,7 @@ for table in metadata.tables.values():
             # Remove excluded columns from the row data
             for col in excluded_columns:
                 row_data.pop(col, None)
-            table_info[f"{table_name}_data"].append(row_data)
+            table_info["data"].append(row_data)  # Append the row data to the 'data' key
 
     # Add table information to schema info
     schema_info[table_name] = table_info
