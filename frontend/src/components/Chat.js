@@ -47,19 +47,21 @@ const Chat = () => {
       <h1> Say Hi to Ferestha </h1>
       <div className="convDisplay">
         <h2>Conversation Log</h2>
-        {chat.map((item, index) => (
-          <div key={index} style={{backgroundColor: index % 2 === 0? '#DFDFDF' : '#000', color: index % 2 === 0? 'black' : 'white', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px', whiteSpace: 'pre-wrap'/* whiteSpace: 'pre-wrap' must be here for formatting */}}>
+          <div className="chatLog">
+            {chat.map((item, index) => (
+              <div key={index} style={{backgroundColor: index % 2 === 0? '#DFDFDF' : '#000', color: index % 2 === 0? 'black' : 'white', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px', whiteSpace: 'pre-wrap'/* whiteSpace: 'pre-wrap' must be here for formatting */}}>
 
 
-            <p><strong>{item.role}: </strong>{item.text}</p>
-          </div> 
-        ))}
-        <Form>
-            <Form.Group>
-              <Form.Control as="textarea" rows={2} value={textInput} placeholder="Type here..." onChange={(e) => setTextInput(e.target.value)} style={{resize:'none',width:'25%'}}></Form.Control>
-              <button type="button" onClick={interact}>Submit</button>
-            </Form.Group>
-          </Form>
+                <p><strong>{item.role}: </strong>{item.text}</p>
+              </div> 
+            ))}
+            <Form>
+                <Form.Group>
+                  <Form.Control as="textarea" rows={2} value={textInput} placeholder="Type here..." onChange={(e) => setTextInput(e.target.value)} style={{resize:'none',color:'black'}}></Form.Control>
+                  <button type="button" onClick={interact}>Submit</button>
+                </Form.Group>
+              </Form>
+        </div>
       </div>
     </div>
   )};
