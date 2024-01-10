@@ -4,10 +4,11 @@
 }
 
 .convDisplay {
+    position:relative;
     background-color: rgb(201, 201, 201);
-    width:30%;
-    min-height:50vh;
-    margin-left:60%;
+    width:40%;
+    min-height:60vh;
+    margin-left:50%;
 }
 
 .convDisplay p {
@@ -30,7 +31,7 @@
 
 .convDisplay textarea{
     position:absolute;
-    vertical-align:bottom;
+    bottom:0;
     padding-left:5px;
     margin: 2%;
     background-color: rgb(240, 240, 240);
@@ -38,10 +39,20 @@
     border-style: none;
     font-Size:20px;
     font-family: "Times New Roman"; 
+    width:80%;
 }
 
 .convDisplay button {
+    position:absolute;
+    bottom:3%;
+    right:3%;
     display:inline-block;
     font-size: 20px;
-    margin: 5%;
+    margin: 2%;
+}
+
+.chatLog{
+    max-height:45vh;
+    overflow:scroll;
+    overflow-x:hidden;
 }
