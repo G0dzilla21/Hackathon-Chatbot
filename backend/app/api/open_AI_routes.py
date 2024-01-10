@@ -3,6 +3,8 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 from schema_extractor import schema_info
+from tabulate import tabulate
+
 
 
 load_dotenv()
@@ -43,16 +45,49 @@ def find_and_save_model_files(base_path):
     print(counter)
     return all_file_contents
 
-#formatting schema data to string implemented by Cody Reeves
 def format_schema_info(schema_info):
     formatted_text = "Database Schema:\n"
     for table, details in schema_info.items():
         formatted_text += f"Table: {table}\n"
-        for column in details['columns']:
-            formatted_text += f"  - Column: {column['name']}, Type: {column['type']}\n"
-        for relation in details['relationships']:
-            formatted_text += f"  - Relationship: {relation['column']} references {relation['references']['table']}({relation['references']['column']})\n"
+
+        # Formatting columns
+        columns = details['columns']
+        if columns:
+            column_headers = ["Column Name", "Type"]
+            column_data = [[col['name'], col['type']] for col in columns]
+            formatted_text += tabulate(column_data, headers=column_headers, tablefmt="grid")
+            formatted_text += "\n\n"
+
+        # Formatting relationships (if any)
+        relationships = details['relationships']
+        if relationships:
+            relationship_headers = ["Column", "References"]
+            relationship_data = [
+                [rel['column'], f"{rel['references']['table']}({rel['references']['column']})"]
+                for rel in relationships
+            ]
+            formatted_text += tabulate(relationship_data, headers=relationship_headers, tablefmt="grid")
+            formatted_text += "\n\n"
+
+        # Get excluded columns for this table
+        excluded_columns = details["excluded_columns"]
+
+        # Formatting table data
+        table_data = details['data']
+        if table_data:
+            # Filter out the excluded columns
+            filtered_columns = [col for col in details['columns'] if col['name'] not in excluded_columns]
+
+            # Using the filtered column names as headers for the data table
+            data_headers = [col['name'] for col in filtered_columns]
+            data_rows = [[row[col['name']] for col in filtered_columns] for row in table_data]
+
+            formatted_text += "Table Data:\n"
+            formatted_text += tabulate(data_rows, headers=data_headers, tablefmt="grid")
+            formatted_text += "\n\n"
+
     return formatted_text
+
 
 
 def handle_initial_schema(base_path):
