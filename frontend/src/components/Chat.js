@@ -48,7 +48,7 @@ const Chat = () => {
       <div className="chatInterface">
       <div className="convDisplay">
         {chat.map((item, index) => (
-          <div key={index} style={{backgroundColor: index % 2 === 0? 'green' : 'lime', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px'}}>
+          <div key={index} style={{backgroundColor: index % 2 === 0? '#DFDFDF' : '#000', color: index % 2 === 0? 'black' : 'white', textAlign: index % 2 === 0? 'right' : 'left', marginBottom: '20px', whiteSpace: 'pre-wrap'/* whiteSpace: 'pre-wrap' must be here for formatting */}}>
             <p><strong>{item.role}: </strong>{item.text}</p>
           </div>
         ))}
