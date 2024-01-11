@@ -29,7 +29,7 @@
     --mainColor:grey;
     --mainColorLight: purple;
     --textColor: white;
-    --secondaryTextColor: brown;
+    --secondaryTextColor: rgb(63, 76, 94);
   }
 
   header {
