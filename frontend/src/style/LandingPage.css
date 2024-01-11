@@ -3,21 +3,31 @@
     src: url(../Font.otf);
   }
 
-* {
+/* * {
     font-family: mainFont;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgb(75, 73, 73);
     color: white;
     
-  }
+  } */
+
+  body {
+    font-family: mainFont;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #d6d3d3; /* Light gray color */
+    color: white;
+}
 
   :root{
     --mainColor:grey;
     --mainColorLight: purple;
     --textColor: white;
     --secondaryTextColor: brown;
+    --modalBackgroundColor: #e0e0e0;
   }
 
   header {
@@ -52,4 +62,11 @@
     color: var(--textColor);
   }
 
+  .DevChatButton {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    /* Add any additional styling for the button here */
+}
 

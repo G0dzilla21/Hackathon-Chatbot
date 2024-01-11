@@ -1,58 +1,113 @@
-.main h1 {
-    margin-left: 3vw;
-    font-size: 50px;
+/* Chat Bubble Styles */
+.chat-message {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    word-wrap: break-word;
 }
 
-.convDisplay {
-    position:relative;
-    background-color: rgb(201, 201, 201);
-    width:40%;
-    min-height:60vh;
-    margin-left:50%;
+.chat-message.user {
+    background-color: #81ff1a;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
 }
 
-.convDisplay p {
-    display: inline-block;
+.chat-message.AI {
+    background-color: #d1e8ff;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    max-width: 80%;
+}
+
+h4 {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #d1e8ff;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    max-width: 80%;
+}
+
+/* Modal Styles */
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(198, 192, 192, 0.3);
+    z-index: 1000;
+}
+
+/* Overlay for Modal */
+.Overlay {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+}
+
+.chatLog {
+    max-height: 250px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #55555565;
+}
+
+/* Close Button Styles */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    color: #333; /* Or any other color */
     font-size: 20px;
-    margin: 10px;
-    font-family: "Times New Roman"; 
+    cursor: pointer;
 }
 
-.convDisplay h2{
-    text-align:center;
-    background-color:rgb(150, 150, 150);
-    color: goldenrod;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    font-size: 40px;
-    font-weight:900;
-    font-family: "Times New Roman"; 
+.closeButton:hover {
+    color: #666;
 }
 
-.convDisplay textarea{
-    position:absolute;
-    bottom:0;
-    padding-left:5px;
-    margin: 2%;
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-    border-style: none;
-    font-Size:20px;
-    font-family: "Times New Roman"; 
-    width:80%;
+/* Textarea Styles */
+textarea {
+    height: 40px; /* Fixed height */
+    width: 500px;
+    overflow-y: auto; /* Make it scrollable */
+    resize: none; /* Disable resizing */
+    border-radius: 10px;
+    /* Add other styling as needed */
 }
 
-.convDisplay button {
-    position:absolute;
-    bottom:3%;
-    right:3%;
-    display:inline-block;
-    font-size: 20px;
-    margin: 2%;
+/* Send Button Styles */
+button.sendButton {
+    padding: 10px 15px; /* Increase padding for a larger button */
+    background-color: #4CAF50; /* A green background color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.chatLog{
-    max-height:45vh;
-    overflow:scroll;
-    overflow-x:hidden;
+button.sendButton:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
 }
+
+.thinking {
+    color: rgb(0, 0, 0); /* Or any color you prefer */
+    /* Additional styling as needed */
+}
+
