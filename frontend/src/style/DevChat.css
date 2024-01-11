@@ -1,0 +1,9 @@
+
+  .chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 1900px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
