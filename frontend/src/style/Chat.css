@@ -1,14 +1,18 @@
+.main {
+    width: 90%;
+}
+
 .main h1 {
     margin-left: 3vw;
     font-size: 50px;
 }
 
 .convDisplay {
-    position:relative;
+    position:absolute;
     background-color: rgb(201, 201, 201);
-    width:40%;
+    width:100%;
     min-height:60vh;
-    margin-left:50%;
+    height: 90%;
 }
 
 .convDisplay p {
@@ -30,7 +34,7 @@
 }
 
 .convDisplay textarea{
-    position:absolute;
+    position:relative;
     bottom:0;
     padding-left:5px;
     margin: 2%;
