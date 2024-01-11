@@ -77,9 +77,11 @@ const Chat = () => {
                 onChange={(e) => setTextInput(e.target.value)}
                 style={{ resize: "none", color: "black" }}
               ></Form.Control>
+              <div>
               <button type="button" onClick={interact}>
                 Submit
               </button>
+              </div>
             </Form.Group>
           </Form>
         </div>
