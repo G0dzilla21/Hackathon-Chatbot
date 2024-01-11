@@ -93,7 +93,7 @@ textarea {
 /* Send Button Styles */
 button.sendButton {
     padding: 10px 15px; /* Increase padding for a larger button */
-    background-color: #4CAF50; /* A green background color */
+    background-color: #45a049; /* A green background color */
     color: white; /* White text */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
@@ -103,7 +103,7 @@ button.sendButton {
 }
 
 button.sendButton:hover {
-    background-color: #45a049; /* Darker shade of green on hover */
+    background-color: #81ff1a; /* Darker shade of green on hover */
 }
 
 .thinking {
