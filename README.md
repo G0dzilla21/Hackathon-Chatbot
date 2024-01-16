@@ -6,7 +6,7 @@ This guide walks you through setting up the project on your local machine.
 
 ### Setting Up the Backend
 
-1. **Open a Terminal Window**.
+1. **Open a Terminal In IDE**.
 2. **Navigate to the Backend Directory:**
    ```
    cd backend
@@ -40,7 +40,7 @@ Replace the placeholders (`<your_secret_key>`, `<password>`, `<your_schema_name>
 
 ### Setting Up the Frontend
 
-1. **Open Another Terminal Window**.
+1. **Open Another Terminal IDE**.
 2. **Navigate to the Frontend Directory:**
    ```
    cd frontend
